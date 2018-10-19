@@ -29,10 +29,10 @@ const AppLogo = styled.img`
 `
 
 const AppHeader = styled.div`
+  background-color: #222;
   height: 12rem;
   padding: 1rem;
-  color: ${props => props.theme.dark};
-  background-color: ${props => props.theme.primary};
+  color: white;
 `
 
 const AppTitle = styled.h1`
@@ -54,7 +54,7 @@ const EmojiWrapper = styled.span.attrs({
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
         <AppWrapper>
           <AppHeader>
             <AppLogo src={logo} alt="logo" />
