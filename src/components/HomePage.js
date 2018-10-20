@@ -1,24 +1,21 @@
 import React, { Component } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import logo from './logo.svg'
 
-import { theme1, theme2 } from './theme/globalStyle'
-import ThemeSelect from './theme/ThemeSelect'
+
+import { theme1, theme2 } from '../theme/globalStyle'
+import ThemeSelect from '../theme/ThemeSelect'
+
 
 const AppWrapper = styled.div`
   text-align: center;
 `
 
-const AppLogo = styled.img`
-  
-  height: 80px;
-
-`
 
 const AppHeader = styled.div`
   height: 12rem;
   padding: 1rem;
-  
+
+
   color: ${props => props.theme.dark};
   background-color: ${props => props.theme.primary};
 `
@@ -53,7 +50,6 @@ class App extends Component {
       <ThemeProvider theme={this.state.theme}>
         <AppWrapper>
           <AppHeader>
-            <AppLogo src={logo} alt="logo" />
             <AppTitle>Welcome to React</AppTitle>
           </AppHeader>
           <AppIntro>

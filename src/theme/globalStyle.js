@@ -7,7 +7,7 @@ export const theme1 = {
   secondary: '#01c1d6',
   danger: '#eb238e',
   light: '#f4f4f4',
-  dark: '#222'
+  dark: '#222',
 }
 
 export const theme2 = {
