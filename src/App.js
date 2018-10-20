@@ -1,38 +1,26 @@
-import React, { Component } from 'react'
-import styled, { keyframes } from 'styled-components'
+import React, { Component } from "react";
+import styled, { ThemeProvider } from "styled-components";
 import logo from './logo.svg'
-import { theme } from './theme/globalStyle'
 
-const ThemeProvider = styled.section`
-
-`;
+import { theme1, theme2 } from './theme/globalStyle'
+import ThemeSelect from './theme/ThemeSelect'
 
 const AppWrapper = styled.div`
   text-align: center;
 `
 
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
-
 const AppLogo = styled.img`
-  animation: ${rotate360} infinite 120s linear;
+  
   height: 80px;
-  &:hover {
-    animation: ${rotate360} infinite 1.5s linear;
-  }
+
 `
 
 const AppHeader = styled.div`
-  background-color: #222;
   height: 12rem;
   padding: 1rem;
-  color: white;
+  
+  color: ${props => props.theme.dark};
+  background-color: ${props => props.theme.primary};
 `
 
 const AppTitle = styled.h1`
@@ -52,9 +40,17 @@ const EmojiWrapper = styled.span.attrs({
 
 
 class App extends Component {
+  state = {
+    theme: theme1
+  }
+  handleThemeChange = e => {
+    let theme = e.target.value
+    theme === 'theme1' ? (theme = theme1) : (theme = theme2)
+    this.setState({ theme })
+  }
   render() {
     return (
-      <ThemeProvider>
+      <ThemeProvider theme={this.state.theme}>
         <AppWrapper>
           <AppHeader>
             <AppLogo src={logo} alt="logo" />
@@ -65,8 +61,9 @@ class App extends Component {
           </AppIntro>
           <AppIntro>
             Components styled with <code>styled-components</code>{' '}
-            <EmojiWrapper aria-label="nail polish" />
+            <EmojiWrapper aria-label="nail polish">💅</EmojiWrapper>
           </AppIntro>
+          <ThemeSelect handleThemeChange={this.handleThemeChange} />
         </AppWrapper>
       </ThemeProvider>
     )
