@@ -1,7 +1,4 @@
 
-import { ThemeProvider } from "styled-components";
-
-
 export const theme1 = {
   primary: '#ff0198',
   secondary: '#01c1d6',

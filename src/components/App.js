@@ -47,7 +47,7 @@ class App extends Component {
   }
   render() {
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <ThemeProvider>
         <AppWrapper>
           <AppHeader>
             <AppTitle>Welcome to React</AppTitle>

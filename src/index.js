@@ -23,7 +23,15 @@ const GlobalStyle = createGlobalStyle`
 
 const root = document.getElementById('root')
 
-ReactDOM.render(<section><HomePage /> <GlobalStyle /></section>, root);
+ReactDOM.render(
+
+  <section>
+    <GlobalStyle />
+    <HomePage /> 
+  </section>
+
+
+, root);
 
 
 serviceWorker.unregister();
