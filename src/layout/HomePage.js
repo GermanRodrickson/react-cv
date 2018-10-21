@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 
-import { theme1, theme2 } from '../../theme/Themes'
-import ThemeSelect from '../../theme/ThemeSelect'
+import { theme1, theme2 } from '../theme/Themes'
+import ThemeSelect from '../theme/ThemeSelect'  
 
 
 const AppWrapper = styled.div`
@@ -57,7 +57,7 @@ class App extends Component {
           </AppIntro>
           <AppIntro>
             Components styled with <code>styled-components</code>{' '}
-            <EmojiWrapper aria-label="nail polish">💅</EmojiWrapper>
+            <EmojiWrapper aria-label="nail polish"></EmojiWrapper>
           </AppIntro>
           <ThemeSelect handleThemeChange={this.handleThemeChange} />
         </AppWrapper>

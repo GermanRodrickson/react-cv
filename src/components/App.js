@@ -57,7 +57,7 @@ class App extends Component {
           </AppIntro>
           <AppIntro>
             Components styled with <code>styled-components</code>{' '}
-            <EmojiWrapper aria-label="nail polish">💅</EmojiWrapper>
+            <EmojiWrapper aria-label="nail polish"></EmojiWrapper>
           </AppIntro>
           <ThemeSelect handleThemeChange={this.handleThemeChange} />
         </AppWrapper>

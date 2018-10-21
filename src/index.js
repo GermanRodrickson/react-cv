@@ -7,8 +7,8 @@ import { createGlobalStyle } from 'styled-components'
 
 
 //---------- Import components 
-import HomePage from './components/layout/HomePage';
-import Referents from './components/layout/Referents';
+import HomePage from './layout/HomePage';
+import Referents from './layout/Referents';
 
 
 
@@ -28,6 +28,15 @@ const GlobalStyle = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  }
+    html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video
+  {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
   }
 `
 
