@@ -2,47 +2,16 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 
-const ContainerOne = styled.div`
-  background-color: #c7cec1;
-  height: 100%;
-  width: 40%;
+const Container = styled.div`
   display: inline-block;
   position: absolute;
-  left: 0;
-`;
-const ContainerTwo = styled.div`
-  background-color: #d9d8d6;
-  height: 100%;
-  width: 30%;
-  display: inline-block;
-  position: absolute;
-  left: 40%;
-`;
-const ContainerThree = styled.div`
-  background-color: #ded7c9;
-  height: 50%;
-  width: 30%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-block;
-`;
-const ContainerFour = styled.div`
-  background-color: #ece7d2;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  left: 30%;
-  width: 40%;
-  display: inline-block;
-`;
-const ContainerFive = styled.div`
-  background-color: #dabfb8;
-  width: 30%;
-  height: 100%;
-  display: inline-block;
-  position: absolute;
-  right: 0;
+
+  background-color: ${props => props.theme.color};
+  height: ${props => props.theme.height};
+  width: ${props => props.theme.width};
+  left: ${props => props.theme.left};
+  bottom: ${props => props.theme.bottom};
+  right: ${props => props.theme.right};
 `;
 
 const Wrapper = styled.section`
@@ -87,6 +56,38 @@ const ContainerParagraph = styled.p`
 const TitleContainer = {
   main: "25px"
 };
+const ContainerOne = {
+  left: "0",
+  height: "100%",
+  width: "40%",
+  color: "#c7cec1"
+};
+const ContainerTwo = {
+  left: "40%",
+  height: "100%",
+  width: "30%",
+  color: "#d9d8d6"
+};
+const ContainerThree = {
+  left: "0",
+  bottom: "0",
+  height: "50%",
+  width: "30%",
+  color: "#ded7c9"
+};
+const ContainerFour = {
+  left: "30%",
+  bottom: "0",
+  height: "50%",
+  width: "40%",
+  color: "#ece7d2"
+};
+const ContainerFive = {
+  right: "0",
+  height: "100%",
+  width: "30%",
+  color: "#dabfb8"
+};
 
 class Referents extends Component {
   render() {
@@ -98,37 +99,37 @@ class Referents extends Component {
           </Paragraph>
         </ExplanationText>
         <Wrapper>
-          <ContainerOne>
+          <Container theme={ContainerOne}>
             <Title theme={TitleContainer}>Title 1</Title>
             
             <ContainerParagraph>
               
             </ContainerParagraph>
-          </ContainerOne>
-          <ContainerTwo>
+          </Container>
+          <Container theme={ContainerTwo}>
             <Title theme={TitleContainer}>Title 2</Title>
             
             <ContainerParagraph>
             </ContainerParagraph>
-          </ContainerTwo>
-          <ContainerThree>
+          </Container>
+          <Container theme={ContainerThree}>
             <Title theme={TitleContainer}>Title 3</Title>
             
             <ContainerParagraph>
             </ContainerParagraph>
-          </ContainerThree>
-          <ContainerFour>
+          </Container>
+          <Container theme={ContainerFour}>
             <Title theme={TitleContainer}>Title 4</Title>
             
             <ContainerParagraph>
             </ContainerParagraph>
-          </ContainerFour>
-          <ContainerFive>
+          </Container>
+          <Container theme={ContainerFive}>
             <Title theme={TitleContainer}>Title 5</Title>
             
             <ContainerParagraph>
             </ContainerParagraph>
-          </ContainerFive>
+          </Container>
         </Wrapper>
       </section>;
   }
