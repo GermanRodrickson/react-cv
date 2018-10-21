@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import HomePage from './components/HomePage';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components'
+// import GlobalStyle from './style/GlobalStyle'
 
 const GlobalStyle = createGlobalStyle`
   body {
