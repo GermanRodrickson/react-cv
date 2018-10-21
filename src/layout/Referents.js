@@ -26,21 +26,12 @@ const ExplanationText = styled.section`
 
 const Title = styled.h2`
   font-size: 36px;
-
 `;
 
 const Paragraph = styled.p`
   width: 60%;
   font-size: 18px;
   margin: 0 auto;
-`;
-
-const Img = styled.img`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-right: 15px;
-  float: right;
 `;
 
 const ContainerParagraph = styled.div`
