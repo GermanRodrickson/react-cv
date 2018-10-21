@@ -4,7 +4,7 @@ import { css, createGlobalStyle } from 'styled-components'
 
 const Normalize = css`
   
-  /*------------------------------------*\
+      /*------------------------------------*\
       $NORMALIZE
   \*------------------------------------*/
 
@@ -58,7 +58,7 @@ const Normalize = css`
   }
 
   /**
-  * Correct `block` display not defined in IE 8/9.
+  * Correct block display not defined in IE 8/9.
   */
 
   article,
@@ -80,7 +80,7 @@ const Normalize = css`
   }
 
   /**
-  * Prevent modern browsers from displaying `audio` without controls.
+  * Prevent modern browsers from displaying audio without controls.
   * Remove excess height in iOS 5 devices.
   */
 
@@ -90,8 +90,8 @@ const Normalize = css`
   }
 
   /**
-  * Address `[hidden]` styling not present in IE 8/9.
-  * Hide the `template` element in IE, Safari, and Firefox < 22.
+  * Address [hidden] styling not present in IE 8/9.
+  * Hide the template element in IE, Safari, and Firefox < 22.
   */
 
   [hidden],
@@ -187,7 +187,7 @@ const Normalize = css`
   ========================================================================== */
 
   /**
-  * Remove border when inside `a` element in IE 8/9.
+  * Remove border when inside a element in IE 8/9.
   */
 
   img {
@@ -232,7 +232,7 @@ const Normalize = css`
   }
 
   /**
-  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+  * Address Firefox 4+ setting line-height on input using !important in
   * the UA stylesheet.
   */
 
@@ -242,10 +242,10 @@ const Normalize = css`
   }
 
   /**
-  * Address inconsistent `text-transform` inheritance for `button` and `select`.
-  * All other form control elements do not inherit `text-transform` values.
-  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
-  * Correct `select` style inheritance in Firefox 4+ and Opera.
+  * Address inconsistent text-transform inheritance for button and select.
+  * All other form control elements do not inherit text-transform values.
+  * Correct button style inheritance in Chrome, Safari 5+, and IE 8+.
+  * Correct select style inheritance in Firefox 4+ and Opera.
   */
 
   button,
@@ -254,10 +254,10 @@ const Normalize = css`
   }
 
   /**
-  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-  *    and `video` controls.
+  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native audio
+  *    and video controls.
   * 3. Improve usability and consistency of cursor style between image-type
-  *    `input` and others.
+  *    input and others.
   */
 
   button,

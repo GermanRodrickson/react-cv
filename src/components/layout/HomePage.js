@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 
-import { theme1, theme2 } from '../theme/Themes'
-import ThemeSelect from '../theme/ThemeSelect'
+import { theme1, theme2 } from '../../theme/Themes'
+import ThemeSelect from '../../theme/ThemeSelect'
 
 
 const AppWrapper = styled.div`

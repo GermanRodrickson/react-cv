@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomePage from './components/HomePage';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components'
 // import GlobalStyle from './style/GlobalStyle'
+
+
+
+//---------- Import components 
+import HomePage from './components/layout/HomePage';
+import Referents from './components/layout/Referents';
+
+
+
+//---------- Normalize CSS
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,7 +37,8 @@ ReactDOM.render(
 
   <section>
     <GlobalStyle />
-    <HomePage /> 
+    {/* <HomePage />  */}
+    <Referents /> 
   </section>
 
 
