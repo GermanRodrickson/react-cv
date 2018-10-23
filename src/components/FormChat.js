@@ -10,7 +10,7 @@ const Wrapper = styled.section`
 
   & input {
     margin-left: 10px;
-    padding: 6px;
+    padding: 8px;
     margin: 10px 2px 10px 6px;
     display: inline-block; 
     width: 70%;
