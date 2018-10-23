@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components"
 
 import Ask from "../components/Ask"
 import Response from "../components/Response"
+import FormChat from "../components/FormChat"
 
 const Wrapper = styled.section`
   background-color: #373640;
@@ -25,10 +26,7 @@ const Box = styled.div `
 `;
 
 const TextBox = styled.div`
-  position: absolute;
-  bottom: 0;
-  background-color: red;  
-  width: 100%;
+  
 `;
 
 
@@ -48,9 +46,7 @@ class Contact extends Component {
           <Response description="Yes, both!" top="50%" />
           <Response description="Here you have it: linkedln and github" top="58%" />
 
-          <TextBox>
-            
-          </TextBox>
+          <FormChat />
         </Box>
       </Wrapper>
     )
