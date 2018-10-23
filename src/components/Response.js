@@ -5,12 +5,12 @@ const Wrapper = styled.div``;
 
 const Message = styled.div`
   position: absolute;
-  background-color: #FFFFFF;
+  background-color: #10171E;
   border-radius: 20px 20px 20px 0px;
   padding: 10px;
   margin-left: 15px;
-  color: #000000;
-  border: 1px solid #373640;
+  color: #FFFFFF;
+  font-size: 14px;
 `;
 
 
@@ -20,10 +20,10 @@ const Response = (props) => {
   let description = props.description;
 
   return (
-  <Wrapper>
-    <Message style={{top: top}}>{description}</Message>
-  </Wrapper>
+    <Wrapper>
+      <Message style={{ top: top }}>{description}</Message>
+    </Wrapper>
   )
 }
 
-export default Response 
+export default Response

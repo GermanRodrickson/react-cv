@@ -6,13 +6,13 @@ import Response from "../components/Response"
 import FormChat from "../components/FormChat"
 
 const Wrapper = styled.section`
-  background-color: #373640;
+  background-color: #FFFFFF;
   height: 100vh;
 `;
 
-const Box = styled.div `
+const Box = styled.div`
   position: relative;
-  background-color: #ffffff;
+  background-color: #15202B;
   width: 400px;
   height: 600px;
   position: absolute;
@@ -35,13 +35,13 @@ class Contact extends Component {
     return (
       <Wrapper>
         <Box>
-          <Ask description="Hi! How can I reach Germán?" top="5%"/>
+          <Ask description="Hi! How can I reach Germán?" top="5%" />
 
           <Response description="You can call him at +34 619 00 43 64" top="16%" />
           <Response description="Or, email him at germanro94@gmail.com" top="24%" />
 
-          <Ask description="Awesome. Thanks!" top="34%"/>
-          <Ask description="Also, He have Github or Linkedln?" top="42%"/>
+          <Ask description="Awesome. Thanks!" top="34%" />
+          <Ask description="Also, He have Github or Linkedln?" top="42%" />
 
           <Response description="Yes, both!" top="50%" />
           <Response description="Here you have it: linkedln and github" top="58%" />
