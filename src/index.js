@@ -9,6 +9,7 @@ import { createGlobalStyle } from 'styled-components'
 //---------- Import components 
 import HomePage from './layout/HomePage';
 import Referents from './layout/Referents';
+import Contact from './layout/Contact';
 
 
 
@@ -47,7 +48,8 @@ ReactDOM.render(
   <section>
     <GlobalStyle />
     {/* <HomePage />  */}
-    <Referents /> 
+    {/* <Referents />  */}
+    <Contact />
   </section>
 
 

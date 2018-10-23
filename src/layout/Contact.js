@@ -24,6 +24,13 @@ const Box = styled.div `
   box-shadow: 1px 1px 15px 1px #000000;
 `;
 
+const TextBox = styled.div`
+  position: absolute;
+  bottom: 0;
+  background-color: red;  
+  width: 100%;
+`;
+
 
 class Contact extends Component {
   render() {
@@ -41,6 +48,9 @@ class Contact extends Component {
           <Response description="Yes, both!" top="50%" />
           <Response description="Here you have it: linkedln and github" top="58%" />
 
+          <TextBox>
+            
+          </TextBox>
         </Box>
       </Wrapper>
     )
