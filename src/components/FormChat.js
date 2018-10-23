@@ -70,7 +70,7 @@ const Wrapper = styled.section`
 
 
 
-const TodoList = (props) => {
+const FormChat = (props) => {
   return (
     <Wrapper>
       <form>
@@ -81,4 +81,4 @@ const TodoList = (props) => {
   )
 }
 
-export default TodoList
+export default FormChat
