@@ -31,9 +31,22 @@ const TextBox = styled.div`
 
 
 class Contact extends Component {
+  constructor() {
+    super()
+    this.sate = {
+      items: [],
+      currentItem: { text: '', key: '' },
+    }
+  }
+  handleInput = e => {
+    console.log('Hello Input')
+  }
+  addItem = e => {
+    e.preventDefault();
+    console.log("Hello World");
+  }
   render() {
-    return (
-      <Wrapper>
+    return <Wrapper>
         <Box>
           <Ask description="Hi! How can I reach Germán?" top="5%" />
 
@@ -46,10 +59,10 @@ class Contact extends Component {
           <Response description="Yes, both!" top="50%" />
           <Response description="Here you have it: linkedln and github" top="58%" />
 
-          <FormChat />
+        <FormChat 
+          addItem={this.addItem}/>
         </Box>
-      </Wrapper>
-    )
+      </Wrapper>;
   }
 }
 

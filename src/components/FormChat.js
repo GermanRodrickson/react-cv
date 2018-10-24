@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.section`
@@ -69,16 +69,17 @@ const Wrapper = styled.section`
 `;
 
 
-
-const FormChat = (props) => {
-  return (
-    <Wrapper>
-      <form>
-        <input placeholder="Message" />
-        <button type="submit"> <strong>Send</strong> </button>
-      </form>
-    </Wrapper>
-  )
+class FormChat extends Component {
+  render() {
+    return (
+      <Wrapper>
+        <form onSubmit={this.props.addItem}>
+          <input placeholder="Message" />
+          <button type="submit"> <strong>Send</strong> </button>
+        </form>
+      </Wrapper>
+    )
+  }
 }
 
 export default FormChat
