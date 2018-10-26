@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 
+import Ask from "../components/Ask";
+
 const Wrapper = styled.section`
   border-top: .1px solid #C8C8C8;
   position: absolute;
@@ -90,7 +92,8 @@ class FormChat extends Component {
     listArray.push(input)
 
     this.setState({
-      list: listArray
+      list: listArray,
+      userInput: ''
     });
   }
 
@@ -110,9 +113,12 @@ class FormChat extends Component {
           </button>
         </form>
 
-        <ul>
-          {this.state.list.map( (val)=> <li>{val}</li> )}
-        </ul>
+        
+        {this.state.list.map( (val)=> 
+          <Ask key={val.toString()} description={val} top="0" />
+        )}
+
+        
 
       </Wrapper>
     )

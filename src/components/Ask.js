@@ -12,6 +12,7 @@ const Message = styled.div`
   padding: 10px;
   margin-right: 15px;
   font-size: 14px;
+  transition: .3s;
 `;
 
 

@@ -25,40 +25,32 @@ const Box = styled.div`
   box-shadow: 1px 1px 15px 1px #000000;
 `;
 
+const TextBox = styled.div`
+  
+`;
+
+const Img = styled.img`
+  position: absolute;
+  left: 50px;
+  top: 50%;
+`;
+
 
 class Contact extends Component {
-  constructor() {
-    super()
-    this.sate = {
-      items: [],
-      currentItem: { text: '', key: '' },
-    }
-  }
-  handleInput = e => {
-    console.log('Hello Input')
-  }
   addItem = e => {
     e.preventDefault();
-    console.log("Hello World");
   }
   render() {
-    return <Wrapper>
-        <Box>
-          <Ask description="Hi! How can I reach Germán?" top="5%" />
-
-          <Response description="You can call him at +34 619 00 43 64" top="16%" />
-          <Response description="Or, email him at germanro94@gmail.com" top="24%" />
-
-          <Ask description="Awesome. Thanks!" top="34%" />
-          <Ask description="Also, He have Github or Linkedln?" top="42%" />
-
-          <Response description="Yes, both!" top="50%" />
-          <Response description="Here you have it: linkedln and github" top="58%" />
-
-        <FormChat 
-          addItem={this.addItem}/>
-        </Box>
-      </Wrapper>;
+    return (
+    <Wrapper>
+      <Img src="../../public/img/Clippy.png" />
+      <Box>
+        
+        <FormChat
+          addItem={this.addItem} />
+      </Box>
+    </Wrapper>
+    )
   }
 }
 
