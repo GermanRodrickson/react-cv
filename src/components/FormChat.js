@@ -81,9 +81,13 @@ class FormChat extends Component {
   changeUserInput(input) {
     this.setState({
       userInput: input
-    }, () => {
-      console.log(input)
-    })
+    });
+  }
+
+  addToList(input) {
+    let listArray = this.state.list;
+
+    listArray.push(input)
   }
 
   render() {
@@ -95,7 +99,11 @@ class FormChat extends Component {
            value={this.state.userInput} 
            type="text" 
            placeholder="Message" />
-          <button type="submit"> <strong>Send</strong> </button>
+          <button 
+          onClick= {()=> this.addToList(this.state.userInput)}
+          type="submit"> 
+          <strong>Send</strong> 
+          </button>
         </form>
       </Wrapper>
     )
