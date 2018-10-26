@@ -88,6 +88,10 @@ class FormChat extends Component {
     let listArray = this.state.list;
 
     listArray.push(input)
+
+    this.setState({
+      list: listArray
+    });
   }
 
   render() {
@@ -105,6 +109,11 @@ class FormChat extends Component {
           <strong>Send</strong> 
           </button>
         </form>
+
+        <ul>
+          {this.state.list.map( (val)=> <li>{val}</li> )}
+        </ul>
+
       </Wrapper>
     )
   }
