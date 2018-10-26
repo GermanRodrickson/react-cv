@@ -74,6 +74,7 @@ const Wrapper = styled.section`
 class FormChat extends Component {
   constructor (props) {
     super (props);
+
     this.state = {
       userInput: '',
       list: []

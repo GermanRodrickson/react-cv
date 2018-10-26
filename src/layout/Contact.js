@@ -33,6 +33,8 @@ const Img = styled.img`
   position: absolute;
   left: 50px;
   top: 50%;
+  width: 400px;
+  height: 400px;
 `;
 
 
@@ -43,7 +45,7 @@ class Contact extends Component {
   render() {
     return (
     <Wrapper>
-      <Img src="../../public/img/Clippy.png" />
+      <Img src="../../content/img/Clippy.png" />
       <Box>
         
         <FormChat
