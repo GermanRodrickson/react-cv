@@ -25,10 +25,6 @@ const Box = styled.div`
   box-shadow: 1px 1px 15px 1px #000000;
 `;
 
-const TextBox = styled.div`
-  
-`;
-
 
 class Contact extends Component {
   constructor() {

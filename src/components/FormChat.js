@@ -70,11 +70,31 @@ const Wrapper = styled.section`
 
 
 class FormChat extends Component {
+  constructor (props) {
+    super (props);
+    this.state = {
+      userInput: '',
+      list: []
+    }
+  }
+
+  changeUserInput(input) {
+    this.setState({
+      userInput: input
+    }, () => {
+      console.log(input)
+    })
+  }
+
   render() {
     return (
       <Wrapper>
         <form onSubmit={this.props.addItem}>
-          <input placeholder="Message" />
+          <input
+           onChange= {(e) => this.changeUserInput(e.target.value)}
+           value={this.state.userInput} 
+           type="text" 
+           placeholder="Message" />
           <button type="submit"> <strong>Send</strong> </button>
         </form>
       </Wrapper>
