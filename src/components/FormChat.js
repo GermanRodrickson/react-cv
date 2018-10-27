@@ -134,9 +134,7 @@ class FormChat extends Component {
           </form>
 
 
-          {this.state.list.map((val) =>
-            <Ask key={val.toString()} description={val} top="" />
-          )}
+          
 
 
         </MyProvider>
