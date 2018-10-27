@@ -70,10 +70,28 @@ const Wrapper = styled.section`
   }
 `;
 
+const MyContext = React.createContext();
+
+class MyProvider extends Component {
+  state = {
+    userInput: '',
+    list: []
+  }
+  render() {
+    return (
+      <MyContext.Provider value={{
+        state: this.state
+      }}>
+        {this.props.children}
+      </MyContext.Provider>
+    )
+  }
+}
+
 
 class FormChat extends Component {
-  constructor (props) {
-    super (props);
+  constructor(props) {
+    super(props);
 
     this.state = {
       userInput: '',
@@ -101,26 +119,27 @@ class FormChat extends Component {
   render() {
     return (
       <Wrapper>
-        <form onSubmit={this.props.addItem}>
-          <input
-           onChange= {(e) => this.changeUserInput(e.target.value)}
-           value={this.state.userInput} 
-           type="text" 
-           placeholder="Message" />
-          <button 
-          onClick= {()=> this.addToList(this.state.userInput)}
-          type="submit"> 
-          <strong>Send</strong> 
-          </button>
-        </form>
+        <MyProvider>
+          <form onSubmit={this.props.addItem}>
+            <input
+              onChange={(e) => this.changeUserInput(e.target.value)}
+              value={this.state.userInput}
+              type="text"
+              placeholder="Message" />
+            <button
+              onClick={() => this.addToList(this.state.userInput)}
+              type="submit">
+              <strong>Send</strong>
+            </button>
+          </form>
 
-        
-        {this.state.list.map( (val)=> 
-          <Ask key={val.toString()} description={val} top="0" />
-        )}
 
-        
+          {this.state.list.map((val) =>
+            <Ask key={val.toString()} description={val} top="" />
+          )}
 
+
+        </MyProvider>
       </Wrapper>
     )
   }
