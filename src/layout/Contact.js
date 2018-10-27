@@ -150,7 +150,7 @@ class Contact extends Component {
           </WrapperForm>
 
           {this.state.list.map((val) =>
-            <Ask key={val.toString()} description={val} top="" />
+            <Ask key={val.toString()} description={val} top={val.top} />
           )}
         </Box>
       </Wrapper>
