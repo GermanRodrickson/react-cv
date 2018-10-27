@@ -117,6 +117,7 @@ class Contact extends Component {
   }
 
   addToList(input) {
+
     let listArray = this.state.list;
 
     listArray.push(input);
@@ -147,7 +148,7 @@ class Contact extends Component {
               </button>
             </form>
           </WrapperForm>
-          
+
           {this.state.list.map((val) =>
             <Ask key={val.toString()} description={val} top="" />
           )}
