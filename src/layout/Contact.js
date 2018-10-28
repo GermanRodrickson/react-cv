@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import styled, { ThemeProvider } from "styled-components"
 
+import Clippy from './Clippy.png'
+
 import Ask from "../components/Ask"
 import Response from "../components/Response"
 
@@ -99,59 +101,49 @@ const WrapperForm = styled.section`
   }
 `;
 
+const getMessage = event => event.target.value
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      userInput: "",
-      list: []
-    };
+  state = { message: '', historial: [] }
+
+  onMessage = (event) => {
+    const message = getMessage(event) 
+    this.setState({ message });
   }
 
-  changeUserInput(input) {
+  append = (event) => {
+    event.preventDefault();
+    const historial = [...this.state, getMessage(event)]
     this.setState({
-      userInput: input
+      historial,
+      message: ''
     });
-  }
-
-  addToList(input) {
-
-    let listArray = this.state.list;
-
-    listArray.push(input);
-
-    this.setState({
-      list: listArray,
-      userInput: ""
-    });
-  }
+  };
 
   render() {
     return (
       <Wrapper>
-        <Img src="../../content/img/Clippy.png" />
+        {/* <Img src={Clippy} /> */}
         <Box>
           <WrapperForm>
-            <form onSubmit={this.props.addItem}>
+            <form onSubmit={this.append}>
               <input
-                onChange={e => this.changeUserInput(e.target.value)}
-                value={this.state.userInput}
+                onChange={this.onMessage}
+                value={this.state.message}
                 type="text"
                 placeholder="Message"
               />
-              <button
-                onClick={() => this.addToList(this.state.userInput)}
+              <button 
                 type="submit">
                 <strong>Send</strong>
               </button>
             </form>
           </WrapperForm>
 
-          {this.state.list.map((val) =>
-            <Ask key={val.toString()} description={val} top={val.top} />
-          )}
+          {this.state.historial.map(message => (
+            <Ask key={message.toString()} description={message} top={message.top} />
+          ))}
         </Box>
       </Wrapper>
     );
