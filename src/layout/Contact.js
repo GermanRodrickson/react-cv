@@ -1,15 +1,15 @@
-import React, { Component } from "react"
-import styled, { ThemeProvider } from "styled-components"
+import React, { Component } from 'react'
+import styled, { ThemeProvider } from 'styled-components'
 
 import Clippy from './Clippy.png'
 
-import Ask from "../components/Ask"
-import Response from "../components/Response"
+import Ask from '../components/Ask'
+import Response from '../components/Response'
 
 const Wrapper = styled.section`
   background-color: #FFFFFF;
   height: 100vh;
-`;
+`
 
 const Box = styled.div`
   position: relative;
@@ -24,11 +24,11 @@ const Box = styled.div`
   margin-top: -300px;
   border-radius: 6px;
   box-shadow: 1px 1px 15px 1px #000000;
-`;
+`
 
 const TextBox = styled.div`
   
-`;
+`
 
 const Img = styled.img`
   position: absolute;
@@ -36,7 +36,7 @@ const Img = styled.img`
   top: 50%;
   width: 400px;
   height: 400px;
-`;
+`
 
 const WrapperForm = styled.section`
   border-top: 0.1px solid #c8c8c8;
@@ -99,29 +99,27 @@ const WrapperForm = styled.section`
     color: #ffffff;
     padding-left: 10px;
   }
-`;
+`
 
 const getMessage = event => event.target.value
 
 class Contact extends Component {
-
   state = { message: '', historial: [] }
 
-  onMessage = (event) => {
-    const message = getMessage(event) 
-    this.setState({ message });
+  onMessage = event => {
+    const message = getMessage(event)
+    this.setState({ message })
   }
 
-  append = (event) => {
-    event.preventDefault();
-    const historial = [...this.state, getMessage(event)]
+  append = event => {
+    event.preventDefault()
     this.setState({
-      historial,
+      historial: [...this.state.historial, this.state.message],
       message: ''
-    });
-  };
+    })
+  }
 
-  render() {
+  render () {
     return (
       <Wrapper>
         {/* <Img src={Clippy} /> */}
@@ -131,25 +129,26 @@ class Contact extends Component {
               <input
                 onChange={this.onMessage}
                 value={this.state.message}
-                type="text"
-                placeholder="Message"
+                type='text'
+                placeholder='Message'
               />
-              <button 
-                type="submit">
+              <button type='submit'>
                 <strong>Send</strong>
               </button>
             </form>
           </WrapperForm>
 
           {this.state.historial.map(message => (
-            <Ask key={message.toString()} description={message} top={message.top} />
+            <Ask
+              key={message.toString()}
+              description={message}
+              top={message.top}
+            />
           ))}
         </Box>
       </Wrapper>
-    );
+    )
   }
 }
-
-
 
 export default Contact
