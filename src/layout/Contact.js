@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
-import Clippy from './Clippy.png'
+import Clippy from '../img/Clippy.png'
 
 import Ask from '../components/Ask'
 import Response from '../components/Response'
@@ -122,7 +122,7 @@ class Contact extends Component {
   render () {
     return (
       <Wrapper>
-        {/* <Img src={Clippy} /> */}
+        <Img src={Clippy} />
         <Box>
           <WrapperForm>
             <form onSubmit={this.append}>
